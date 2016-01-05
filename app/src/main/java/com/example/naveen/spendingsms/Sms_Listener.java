@@ -133,8 +133,11 @@ public class Sms_Listener extends Service {
                             int length = message.length();
                             //message = message.substring(length - 4, length);
                             Log.e("Message", "Hello" + message);
-                            onSmsReceived(message);
-                            abortBroadcast();
+
+                            if (phoneNumber.toUpperCase().contains(prefs.getString("bankname",null))) {
+                                onSmsReceived(message);
+                                abortBroadcast();
+                            }
                             //Toast.makeText(context, "akbar broadacast message "+message, Toast.LENGTH_SHORT).show();
                         }
                     } // end for loop

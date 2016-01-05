@@ -12,19 +12,43 @@
     tools:context="com.example.naveen.spendingsms.MainActivity"
     tools:showIn="@layout/activity_main">
 
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:errorEnabled="true"
+        android:layout_marginTop="40dp"
+        android:id="@+id/bt_til_et">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your bank name"
+            android:id="@+id/banktext"/>
+    </android.support.design.widget.TextInputLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bt_til_et"
+        android:id="@+id/storebutton"
+        android:layout_centerHorizontal="true"
+        android:text="Store Bank name"
+        android:onClick="bankname"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/sms_text"
+        android:visibility="gone"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="150dp"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/printText"
-        android:layout_below="@+id/sms_text"
+        android:visibility="gone"
         android:text="asdf"
         android:textColor="#000"
+        android:textSize="20sp"
         android:layout_centerHorizontal="true"
+        android:layout_centerInParent="true"
         android:layout_marginTop="30dp"/>
 </RelativeLayout>
